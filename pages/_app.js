@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://next-test-54ch.vercel.app/" />
         <meta property="og:site_name" content="Гидрошпонки деформационных и рабочих швов" />
         <meta property="og:title" content="Гидрошпонки деформационных и рабочих швов" />
+        <meta name="google-site-verification" content="-qSi8vgtzlqV5zvrGIaEpTIneIwYXb5Gu_aJwSOJitw" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/*<link rel="icon" href="/favicon.ico" />*/}
