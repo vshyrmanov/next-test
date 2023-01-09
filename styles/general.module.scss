@@ -1,0 +1,158 @@
+.header {
+  height: 50px;
+  nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #100f10;
+    .burger {
+      flex: 0 0 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      svg {
+        cursor: pointer;
+        color: #7c7a7a;
+        transition: 250ms ease-in-out;
+        &:hover {
+          color: #575656;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  flex: 1 1 auto;
+
+  a {
+    color: #bdbdbd;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+.menu {
+  flex: 0 1 auto;
+  display: flex;
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #7c7a7a;
+    transition: 250ms ease-in-out;
+    &:hover {
+      color: #575656;
+    }
+  }
+}
+
+.wrapper {
+  flex: 1;
+  min-height: 100vh;
+  //padding-bottom: 200px;
+  //border: 1px solid red;
+}
+
+.footer {
+  //position: fixed;
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  background: #100f10;
+  //padding-top: 40px;
+  color: #7c7a7a;
+  .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 3rem;
+    }
+    p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+    }
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+      li {
+        margin: 0 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #7c7a7a;
+
+      }
+    }
+  }
+  .footerBottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: #7c7a7a;
+  transition: width 400ms;
+  .sidebarInner {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .sidebarNav {
+    flex: 1 1 auto;
+    padding: 5px;
+    .link {
+      .btnLink {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #2d2d2d;
+        transition: 250ms ease-in-out;
+        &:hover {
+          color: #111111;
+        }
+      }
+    }
+
+  }
+
+}
+.open {
+  width: 260px;
+}
