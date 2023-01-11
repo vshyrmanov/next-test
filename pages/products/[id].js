@@ -5,19 +5,19 @@ import Head from "next/head";
 
 const ProductPage = () => {
 	const {query} = useRouter();
+	const { title, keywords, description } = data[`${query.id || "default"}_head`];
 
 	return (
 		<>
 			<Head>
-				<title>Техпластины МБС и техпластины ТМКЩ</title>
-				<meta name="keywords" content="Уплотнители, Уплотнители киев, Уплотнители Украина, резинотехнические шнуры ТМКЩ, трубки МБС, соэкструзия, Техпластины предназначена для изготовления уплотнительных деталей в трансформаторных и электротехнических устройствах." />
-				<meta name="description" content="Техпластины предназначена для изготовления уплотнительных деталей в трансформаторных и электротехнических устройствах."/>
+				<title>{`${title || ""} | Гидрошпонки деформационных и рабочих швов`}</title>
+				<meta name="keywords" content={keywords} />
+				<meta name="description" content={description} />
 				{/*<base href="https://next-test-54ch.vercel.app/products/gvr" />*/}
 				<meta property="og:type" content="website" />
 				{/*<meta property="og:url" content="https://next-test-54ch.vercel.app/products/gvr" />*/}
-				<meta property="og:site_name" content="Техпластины МБС и техпластины ТМКЩ" />
-				<meta property="og:title" content="Техпластины МБС и техпластины ТМКЩ" />
-
+				<meta property="og:site_name" content="Гидрошпонки деформационных и рабочих швов" />
+				<meta property="og:title" content={`${title || ""} | Гидрошпонки деформационных и рабочих швов`} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{/*<link rel="icon" href="/favicon.ico" />*/}
 			</Head>
