@@ -1,0 +1,54 @@
+.btnLink {
+  text-decoration: none;
+  .homeButtonLight {
+    width: 145px;
+    height: 45px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    color: #f3eeee;
+    background: #7c7a7a;
+    transition: 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background: #d0cece;
+      color: #100f10;
+    }
+  }
+
+  .homeButtonDark {
+    width: 145px;
+    height: 45px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    color: #f3eeee;
+    background: #100f10;
+    transition: 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background: #7c7a7a;
+      color: #ece9e9;
+    }
+  }
+}

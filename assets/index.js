@@ -52,6 +52,33 @@ import ff5 from './form/ff5.jpeg';
 
 import shp_bb from './shpbb/shp-ob.jpeg';
 
+import expansion1 from './expansion/expansion1.jpeg';
+
+import expansJoint1 from './expansJoints/expansJoints1.png';
+import expansJoint2 from './expansJoints/expansJoints2.jpeg';
+import expansJoint3 from './expansJoints/expansJoints3.jpeg';
+import expansJoint4 from './expansJoints/expansJoints4.jpeg';
+import expansJoint5 from './expansJoints/expansJoints5.jpeg';
+
+import manufacturing1 from './manufacturing/manufacturing1.png';
+import manufacturing2 from './manufacturing/manufacturing2.jpeg';
+
+import mainlogo from './logo.png';
+import homeHeader1 from './home/homeHeader1.png'
+import homeHeader2 from './home/homeHeader2.png'
+import homeHeader3 from './home/homeHeader3.png'
+import homeHeader4 from './home/homeHeader4.png'
+import homeManufacturing from './home/homeManufacturing1.webp';
+
+import prod1 from './productions/prod1.jpeg'
+import prod2 from './productions/prod2.jpeg'
+import prod3 from './productions/prod3.jpeg'
+import prod4 from './productions/prod4.jpeg'
+import prod5 from './productions/prod5.jpeg'
+import prod6 from './productions/prod6.jpeg'
+import prod7 from './productions/prod7.jpeg'
+import prod8 from './productions/prod8.jpeg'
+
 const gnr = {
 	gnr_1,
 	gnr_2,
@@ -104,6 +131,42 @@ const characteristics = {
 	shp_bb
 }
 
+const expansion = {
+	expansion1
+}
+
+const expansJoint = {
+	expansJoint1,
+	expansJoint2,
+	expansJoint3,
+	expansJoint4,
+	expansJoint5,
+}
+
+const manufacturing = {
+	manufacturing2,
+	manufacturing1
+}
+
+const home = {
+	homeHeader1,
+	homeHeader2,
+	homeHeader3,
+	homeHeader4,
+	homeManufacturing
+}
+
+const productions = {
+	prod1,
+	prod2,
+	prod3,
+	prod4,
+	prod5,
+	prod6,
+	prod7,
+	prod8,
+}
+
 const img = {
 	plastina,
 	gnr,
@@ -112,7 +175,13 @@ const img = {
 	us,
 	privalbrus,
 	form,
-	characteristics
+	characteristics,
+	expansion,
+	expansJoint,
+	manufacturing,
+	mainlogo,
+	home,
+	productions
 }
 
 export {

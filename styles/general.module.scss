@@ -1,5 +1,6 @@
 .header {
   height: 50px;
+
   nav {
     height: 100%;
     display: flex;
@@ -11,6 +12,7 @@
       align-items: center;
       justify-content: center;
       color: #fff;
+
       svg {
         cursor: pointer;
         color: #7c7a7a;
@@ -22,6 +24,8 @@
     }
   }
 }
+
+
 
 .title {
   flex: 1 1 auto;
@@ -40,27 +44,40 @@
 .menu {
   flex: 0 1 auto;
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   button {
     background: none;
     border: none;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 15px;
     color: #7c7a7a;
     transition: 250ms ease-in-out;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #100f10;
     &:hover {
       color: #575656;
+      border-bottom: 1px solid #7c7a7a;
     }
+
+  }
+  .activeNavLink {
+    color: #575656;
+    border-bottom: 1px solid #7c7a7a;
   }
 }
 
 .wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   flex: 1;
   min-height: 100vh;
   background-color: #fff;
-  padding: 20px;
+  //padding: 20px;
+  flex-direction: column;
+  position: relative;
 
   .product_main {
     display: flex;
@@ -69,6 +86,7 @@
     flex-direction: row;
     border-bottom: 1px solid #bdbdbd;
     padding: 20px;
+    margin: 20px;
     //margin-bottom: 20px;
     h1 {
       font-size: 48px;
@@ -82,7 +100,7 @@
     font-weight: 400;
     color: #221f1f;
     letter-spacing: 1.1px;
-    text-decoration: underline;
+    //text-decoration: underline;
     margin-bottom: 10px;
   }
   .product_settings {
@@ -90,7 +108,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px;
+    margin: 20px;
     .classification {
       display: flex;
       flex-direction: column;
@@ -99,10 +118,15 @@
       width: 40%;
       padding: 10px 20px;
       border-right: 1px solid #bdbdbd;
+      h3 {
+        font-weight: bold;
+        //font-size: 18px;
+      }
       label {
-        border: 1px solid #bdbdbd;
+        width: 100%;
+        border-bottom: 1px solid #bdbdbd;
         padding: 10px;
-        border-radius: 15px;
+        //border-radius: 15px;
         margin: 5px;
       }
     }
@@ -115,8 +139,11 @@
       justify-content: flex-start;
       flex-direction: column;
       padding: 10px 20px;
+      h3 {
+        font-weight: bold;
+      }
       p {
-        text-align: left;
+        text-align: justify;
         font-weight: 400;
       }
 
@@ -125,6 +152,10 @@
   }
   .table_header {
     width: 50%;
+    margin: 20px;
+    h3 {
+      font-weight: bold;
+    }
     td {
       text-align: center;
       padding: 5px;
@@ -141,11 +172,15 @@
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    table {
+      margin: 20px;
+      width: 100%;
+    }
     h3 {
       font-size: 24px;
-      font-weight: 400;
-      text-decoration: underline;
+      font-weight: bold;
       color: #221f1f;
       letter-spacing: 1.1px;
       margin: 10px;
@@ -155,6 +190,8 @@
       padding: 5px;
     }
   }
+
+
 
 }
 
@@ -195,11 +232,15 @@
       margin: 1rem 0 3rem 0;
       li {
         margin: 0 10px;
+        &:hover {
+          svg {
+            color: #575656;
+          }
+        }
       }
       a {
         text-decoration: none;
         color: #7c7a7a;
-
       }
     }
   }
@@ -214,51 +255,39 @@
 
 .sidebar {
   position: absolute;
-  overflow: hidden;
   top: 50px;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 100%;
-  background: #7c7a7a;
-  transition: width 400ms;
-  .sidebarInner {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 300px;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
-  }
+  left: -300px;
+  width: 300px;
+  height: fit-content;
+  z-index: 3;
+  background: #100f10;
+  padding: 20px;
+  transition: 300ms ease-in-out;
   .sidebarNav {
-    flex: 1 1 auto;
-    padding: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
     .link {
-      //border: 1px solid red;
-      padding: 10px 0;
-      text-decoration: none;
       .btnLink {
-        text-align: start;
-        background: none;
+        margin: 5px 0;
         border: none;
+        border-radius: 16px;
+        background: none;
+        padding: 10px;
+        width: 100%;
         cursor: pointer;
-        color: #2d2d2d;
+        color: #7c7a7a;
         transition: 250ms ease-in-out;
         &:hover {
-          color: #111111;
+          background: #fff;
+          color: #100f10;
         }
       }
+      .activeLink {
+        background: #fff;
+        color: #100f10;
+      }
     }
-
   }
-
 }
-.open {
-  width: 300px;
+
+.sidebarOpen {
+  left: 0
 }

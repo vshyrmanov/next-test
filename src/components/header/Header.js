@@ -1,13 +1,17 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import style from '../../../styles/general.module.scss';
 import styles from "../../../styles/general.module.scss";
 import {links} from "../../../data/data";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import cn from 'classnames';
+import {img} from "../../../assets";
+import {useRouter} from "next/router";
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
+	const {query, pathname} = useRouter();
 
 	return (
 		<>
@@ -18,37 +22,41 @@ const Header = () => {
 					</div>
 					<div className={style.title}>
 						<Link href='/' className={style.link}>
-							<h3>Termo Elasto Plast</h3>
+							<Image src={img.mainlogo} alt="mainlogo" width={200} />
 						</Link>
 					</div>
 					<div className={style.menu}>
 						<Link href='/manufacturing' className={style.link}>
-							<button>Manufacturing</button>
+							<button className={pathname === "/manufacturing" ? styles.activeNavLink : ""}>Производство гидрошпонки</button>
 						</Link>
 						<Link href='/delivery' className={style.link}>
-							<button>Delivery</button>
+							<button className={pathname === "/delivery" ? styles.activeNavLink : ""}>Доставка</button>
 						</Link>
 						<Link href='/contacts' className={style.link}>
-							<button>Contacts</button>
+							<button className={pathname === "/contacts" ? styles.activeNavLink : ""}>Контакты</button>
 						</Link>
 					</div>
 				</nav>
 			</header>
-
-			<aside className={open ? cn(styles.sidebar, styles.open) : styles.sidebar}>
-				<div className={styles.sidebarInner}>
-					<nav className={styles.sidebarNav}>
-						{links.map(e =>
-							<Link key={e.link} href={`/products/${e.link}`} className={styles.link}>
-								<button
-									className={styles.btnLink}
-									onClick={() => setOpen(false)}
-								>{e.label}</button>
-							</Link>
-						)}
-					</nav>
-				</div>
-			</aside>
+			<div className={open ? cn(styles.sidebar, styles.sidebarOpen) : styles.sidebar}>
+				<nav className={styles.sidebarNav}>
+					<Link href="/" className={styles.link}>
+						<button
+							className={pathname === "/" ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
+							onClick={() => setOpen(false)}
+						>Домой
+						</button>
+					</Link>
+								{links.map(e =>
+									<Link key={e.link} href={`/products/${e.link}`} className={styles.link}>
+										<button
+											className={query?.id === e.link ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
+											onClick={() => setOpen(false)}
+										>{e.label}</button>
+									</Link>
+								)}
+							</nav>
+			</div>
 		</>
 
 	);

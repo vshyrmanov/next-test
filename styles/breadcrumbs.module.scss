@@ -1,0 +1,20 @@
+.breadcrumb {
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span, svg {
+      margin: 0 5px;
+      color: #7c7a7a;
+      transition: 200ms ease-in-out;
+      &:hover {
+        color: #5e5d5d;
+      }
+    }
+  }
+}

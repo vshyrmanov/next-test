@@ -1,0 +1,120 @@
+.home {
+  width: 100%;
+  height: fit-content;
+  .section1 {
+    background: #100f10;
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      width: 60%;
+      height: 100%;
+      margin: 20px;
+      //border: 1px solid red;
+      h1 {
+        color: #f3eeee;
+        font-size: 48px;
+        margin: 20px;
+        letter-spacing: 1.5px;
+      }
+      h3 {
+        color: #7c7a7a;
+        text-decoration: none;
+        margin: 10px 20px;
+      }
+      .btns {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .imgs {
+      width: 40%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      //border: 1px solid red;
+      height: 500px;
+      .imgsBlock {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        img:nth-child(2) {
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+  .section2 {
+    //border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    //flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    padding: 40px;
+    background: #e8e8e8;
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      width: 50%;
+      margin: 20px 20px 0 20px;
+      //border: 1px solid red;
+      h2 {
+        color: #100f10;
+        font-size: 48px;
+        margin: 20px 20px 0 20px;
+        letter-spacing: 1.5px;
+      }
+      p {
+        color: #7c7a7a;
+        text-decoration: none;
+        margin: 0 20px 10px 20px;
+        text-align: justify;
+      }
+
+      .btns {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+      }
+    }
+    .imgs {
+      width: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      //height: 500px;
+    }
+  }
+}
+
+@media (300px <= width <= 1024px) {
+  .home {
+    .section2 {
+      flex-direction: column;
+      .title {
+        width: 100%;
+        .btns {
+          justify-content: center;
+        }
+      }
+      .imgs {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

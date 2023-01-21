@@ -2,6 +2,7 @@ import React from 'react';
 import {data} from "../../data/data";
 import { useRouter } from 'next/router'
 import Head from "next/head";
+import Breadcrumb from "../../src/components/breadcrumb/Breadcrumb";
 
 const ProductPage = () => {
 	const {query} = useRouter();
@@ -22,6 +23,7 @@ const ProductPage = () => {
 				{/*<link rel="icon" href="/favicon.ico" />*/}
 			</Head>
 			<div>
+				<Breadcrumb linksArray={[{url: "/products", name: "Продукция"}]} />
 				{query.id ? data[query.id].map((e, index) =>
 					<React.Fragment key={index}>{e}</React.Fragment>
 				) : <h2>Loading ...</h2>}
