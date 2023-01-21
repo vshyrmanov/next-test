@@ -26,6 +26,32 @@ import gnr_24 from './gnr/gnr_24.png';
 import gnr_25 from './gnr/gnr_25.png';
 import gnr_26 from './gnr/gnr_26.png';
 
+import b12 from './gnd/b-12.jpeg';
+
+import gvd_1 from './gvd/gvd_1.jpeg';
+
+import us1 from './us/us1.jpeg';
+import us2 from './us/us2.jpeg';
+import us3 from './us/us3.jpeg';
+import us4 from './us/us4.jpeg';
+import us5 from './us/us5.jpeg';
+
+import bb1 from './privalbrus/bb1.jpeg';
+import bb2 from './privalbrus/bb2.jpeg';
+import bb3 from './privalbrus/bb3.jpeg';
+import bb4 from './privalbrus/bb4.jpeg';
+import bb5 from './privalbrus/bb5.jpeg';
+import bb6 from './privalbrus/bb6.jpeg';
+import bb7 from './privalbrus/bb7.jpeg';
+
+import ff1 from './form/ff1.jpeg';
+import ff2 from './form/ff2.jpeg';
+import ff3 from './form/ff3.jpeg';
+import ff4 from './form/ff4.jpeg';
+import ff5 from './form/ff5.jpeg';
+
+import shp_bb from './shpbb/shp-ob.jpeg';
+
 const gnr = {
 	gnr_1,
 	gnr_2,
@@ -55,9 +81,38 @@ const gnr = {
 	gnr_26,
 }
 
+const gnd = {
+	b12
+}
+const gvd = {
+	gvd_1
+}
+
+const us = {
+	us1,us2,us3,us4,us5
+}
+
+const privalbrus = {
+	bb1, bb2, bb3,bb4,bb5,bb6,bb7
+}
+
+const form = {
+	ff1,ff2,ff3,ff4,ff5,
+}
+
+const characteristics = {
+	shp_bb
+}
+
 const img = {
 	plastina,
-	gnr
+	gnr,
+	gnd,
+	gvd,
+	us,
+	privalbrus,
+	form,
+	characteristics
 }
 
 export {

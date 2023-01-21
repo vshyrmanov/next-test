@@ -123,6 +123,17 @@
     }
 
   }
+  .table_header {
+    width: 50%;
+    td {
+      text-align: center;
+      padding: 5px;
+    }
+    .table_title {
+      border: 1px solid red;
+    }
+  }
+
   .table {
     width: 100%;
     border-top: 1px solid #bdbdbd;
@@ -224,8 +235,16 @@
   .sidebarNav {
     flex: 1 1 auto;
     padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
     .link {
+      //border: 1px solid red;
+      padding: 10px 0;
+      text-decoration: none;
       .btnLink {
+        text-align: start;
         background: none;
         border: none;
         cursor: pointer;
@@ -241,5 +260,5 @@
 
 }
 .open {
-  width: 260px;
+  width: 300px;
 }
