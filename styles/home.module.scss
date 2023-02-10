@@ -8,6 +8,7 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .title {
       display: flex;
@@ -17,7 +18,6 @@
       width: 60%;
       height: 100%;
       margin: 20px;
-      //border: 1px solid red;
       h1 {
         color: #f3eeee;
         font-size: 48px;
@@ -57,11 +57,11 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    //flex-direction: row;
+    flex-direction: column;
     align-items: center;
     height: fit-content;
-    padding: 40px;
-    background: #e8e8e8;
+    //padding: 40px;
+    //background: #e8e8e8;
     .title {
       display: flex;
       flex-direction: column;
@@ -70,6 +70,7 @@
       width: 50%;
       margin: 20px 20px 0 20px;
       //border: 1px solid red;
+      z-index: 10;
       h2 {
         color: #100f10;
         font-size: 48px;
@@ -103,6 +104,21 @@
 
 @media (300px <= width <= 1024px) {
   .home {
+    .section1 {
+      .title {
+        width: 100%;
+        z-index: 2;
+        margin-bottom: 140px;
+      }
+      .imgs {
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        //border: 1px solid red;
+        z-index: 1;
+      }
+    }
     .section2 {
       flex-direction: column;
       .title {

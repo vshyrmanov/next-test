@@ -23,7 +23,7 @@ const ProductPage = () => {
 				{/*<link rel="icon" href="/favicon.ico" />*/}
 			</Head>
 			<div>
-				<Breadcrumb linksArray={[{url: "/products", name: "Продукция"}]} />
+				<Breadcrumb />
 				{query.id ? data[query.id].map((e, index) =>
 					<React.Fragment key={index}>{e}</React.Fragment>
 				) : <h2>Loading ...</h2>}

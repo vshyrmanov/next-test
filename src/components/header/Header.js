@@ -40,13 +40,6 @@ const Header = () => {
 			</header>
 			<div className={open ? cn(styles.sidebar, styles.sidebarOpen) : styles.sidebar}>
 				<nav className={styles.sidebarNav}>
-					<Link href="/" className={styles.link}>
-						<button
-							className={pathname === "/" ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
-							onClick={() => setOpen(false)}
-						>Домой
-						</button>
-					</Link>
 								{links.map(e =>
 									<Link key={e.link} href={`/products/${e.link}`} className={styles.link}>
 										<button
@@ -55,7 +48,26 @@ const Header = () => {
 										>{e.label}</button>
 									</Link>
 								)}
-							</nav>
+					<div className={style.divider} />
+					<Link href='/manufacturing' className={cn(style.link, style.response_navLink)}>
+						<button
+							onClick={() => setOpen(false)}
+							className={pathname === "/manufacturing" ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
+						>Производство гидрошпонки</button>
+					</Link>
+					<Link href='/delivery' className={cn(style.link, style.response_navLink)}>
+						<button
+							onClick={() => setOpen(false)}
+							className={pathname === "/delivery" ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
+						>Доставка</button>
+					</Link>
+					<Link href='/contacts' className={cn(style.link, style.response_navLink)}>
+						<button
+							onClick={() => setOpen(false)}
+							className={pathname === "/contacts" ? cn(styles.btnLink, styles.activeLink) : styles.btnLink}
+						>Контакты</button>
+					</Link>
+				</nav>
 			</div>
 		</>
 

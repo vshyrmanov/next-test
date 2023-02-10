@@ -8,6 +8,7 @@ import HomeButton from "../buttons/HomeButton";
 
 const Card = ({ product }) => {
 	return (
+		<Link href={`products/${product.link}`} style={{ textDecoration: "none" }}>
 			<div className={styles.card}>
 				<div className={styles.img}>
 					<Image src={product.img} alt={product.title}/>
@@ -16,13 +17,14 @@ const Card = ({ product }) => {
 					<h3>{product.title}</h3>
 					<p>{product.text}</p>
 				</div>
-				<div className={styles.btn}>
-					<HomeButton type="dark" link={`products/${product.link}`}>
-						Подробней
-						<IoIosArrowForward />
-					</HomeButton>
-				</div>
+				{/*<div className={styles.btn}>*/}
+				{/*	<HomeButton type="dark" link={`products/${product.link}`}>*/}
+				{/*		Подробней*/}
+				{/*		<IoIosArrowForward />*/}
+				{/*	</HomeButton>*/}
+				{/*</div>*/}
 			</div>
+		</Link>
 	);
 };
 

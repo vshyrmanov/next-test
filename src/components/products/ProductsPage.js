@@ -8,7 +8,6 @@ const ProductsPage = () => {
 
 	return (
 		<>
-			<Breadcrumb />
 			<div className={styles.products}>
 				{products.map((product, productIndex) =>
 					<Card key={productIndex} product={product}/>

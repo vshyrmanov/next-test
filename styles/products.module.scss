@@ -4,21 +4,20 @@
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px 5px;
     border: 1px solid rgba(189, 189, 189, 0.44);
     width: 400px;
-    height: 400px;
+    height: 340px;
     background: #fff;
     position: relative;
-    cursor: default;
-
+    cursor: pointer;
     //border-radius: 12px;
     margin: 10px;
     transition: 200ms ease-in-out;
