@@ -13,9 +13,13 @@
       color: #fff;
 
       svg {
+        pointer-events: none;
         cursor: pointer;
         color: #7c7a7a;
         transition: 250ms ease-in-out;
+        opacity: 0;
+        width: 30px;
+        height: 30px;
         &:hover {
           color: #575656;
         }
@@ -43,9 +47,49 @@
 .menu {
   flex: 0 1 auto;
   display: flex;
-  display: flex;
   align-items: center;
   justify-content: center;
+  .dropdownBtn {
+    position: relative;
+    .dropdown_menu {
+      position: absolute;
+      z-index: 3;
+      width: 300px;
+      background: #100f10;
+      opacity: 1;
+      transition: 250ms ease-in-out;
+      padding: 5px;
+      .link {
+        .btnLink {
+          margin: 5px 0;
+          border: none;
+          border-radius: 8px;
+          background: none;
+          padding: 10px;
+          width: 100%;
+          cursor: pointer;
+          color: #7c7a7a;
+          transition: 250ms ease-in-out;
+          &:hover {
+            background: #fff;
+            color: #100f10;
+          }
+        }
+        .activeLink {
+          background: #fff;
+          color: #100f10;
+        }
+      }
+      .response_navLink {
+        display: none;
+      }
+    }
+    .disable {
+      opacity: 0;
+      z-index: -1;
+    }
+
+  }
   button {
     background: none;
     border: none;
@@ -275,30 +319,7 @@
     display: none;
   }
   .sidebarNav {
-    .link {
-      .btnLink {
-        margin: 5px 0;
-        border: none;
-        border-radius: 16px;
-        background: none;
-        padding: 10px;
-        width: 100%;
-        cursor: pointer;
-        color: #7c7a7a;
-        transition: 250ms ease-in-out;
-        &:hover {
-          background: #fff;
-          color: #100f10;
-        }
-      }
-      .activeLink {
-        background: #fff;
-        color: #100f10;
-      }
-    }
-    .response_navLink {
-      display: none;
-    }
+
   }
 }
 
@@ -307,6 +328,16 @@
 }
 
 @media (300px <= width <= 1024px) {
+  .header {
+    nav {
+      .burger {
+        svg {
+          pointer-events: auto;
+          opacity: 1;
+        }
+      }
+    }
+  }
   .title {
     display: flex;
     justify-content: center;
@@ -314,7 +345,34 @@
     margin-right: 64px;
   }
   .menu {
-    display: none;
+    .menu_link {
+      display: none;
+    }
+    .dropdownBtn {
+      //border: 1px solid red;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        color: #000;
+      }
+      .dropdown_menu {
+        top: 50px;
+        width: 100%;
+        opacity: 1;
+        z-index: 3;
+        .response_navLink {
+          display: block;
+        }
+      }
+      .disable {
+        display: none;
+      }
+
+    }
   }
   .sidebar {
     width: 100%;
